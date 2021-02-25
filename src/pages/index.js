@@ -17,7 +17,7 @@ const Home = () => (
     <Slide left cascade>
     <div>
           <h1>Привет!</h1>
-          <h2>Меня зовут Денис Тепляков</h2>
+          <h2>TEST TEST TEST</h2>
           <h2>И я <ReactRotatingText items={textArray} /></h2>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
