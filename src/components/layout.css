@@ -602,3 +602,10 @@ pre tt:after {
 }
 
 
+
+
+@media (max-width: 768px) {
+ header {
+   height: 30px;
+ }
+}

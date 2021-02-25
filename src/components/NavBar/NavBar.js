@@ -3,7 +3,7 @@ import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: 15%;
   width: 100%;
   display: flex;
   background-color: #fff;
@@ -13,12 +13,12 @@ const Navigation = styled.nav`
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 10vw;
-  
+  top:0;
   z-index: 2;
   align-self: right;
   @media (max-width: 768px) {
     position: fixed;
-    height: 8vh;
+    height: 10%;
     top: 0;
     right: 0;
   }
@@ -28,7 +28,9 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 10vw;
+  padding: 0 8vw;
+  position: absolute;
+  right: 10%;
   @media (max-width: 768px) {
     display: flex;
   }
@@ -44,11 +46,11 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 15vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    right: ${props => (props.open ? "-100%" : "0")};
   }
 `
 

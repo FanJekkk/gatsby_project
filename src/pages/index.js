@@ -15,7 +15,7 @@ const Home = () => (
     <SEO title="Home" />
     
     <Slide left cascade>
-    <div>
+    <div style={{marginLeft: '100px'}}>
           <h1>Привет!</h1>
           <h2>TEST TEST TEST</h2>
           <h2>И я <ReactRotatingText items={textArray} /></h2>
