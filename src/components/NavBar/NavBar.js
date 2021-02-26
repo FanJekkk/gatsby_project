@@ -15,7 +15,7 @@ const Navigation = styled.nav`
   padding: 0 10vw;
   top:0;
   z-index: 2;
-  align-self: right;
+  align-self: center;
   @media (max-width: 768px) {
     position: fixed;
     height: 10%;
@@ -41,6 +41,8 @@ const Navbox = styled.div`
   height: 100%;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+  right: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
