@@ -30,9 +30,10 @@ const Toggle = styled.div`
   cursor: pointer;
   padding: 0 8vw;
   position: absolute;
-  right: 10%;
+  right: 5%;
   @media (max-width: 768px) {
     display: flex;
+    padding-left: 0px;
   }
 `
 

@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color:black;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -18,6 +18,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background-color: white;
 }
 article,
 aside,
@@ -608,4 +609,20 @@ pre tt:after {
  header {
    height: 30px;
  }
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+}
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #FAFAFA;
+}
+.dud {
+  color: #757575;
 }
