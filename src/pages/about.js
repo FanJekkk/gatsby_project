@@ -10,6 +10,19 @@ const About = () => (
     <h1>Hi from the About page</h1>
     <p>Welcome to page 3</p>
     <Link to="/">Go back to the homepage</Link>
+    <h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p><h1>Hi from the About page</h1>
+    <p>Welcome to page 3</p>
   </Layout>
 )
 

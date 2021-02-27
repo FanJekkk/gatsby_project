@@ -626,3 +626,64 @@ pre tt:after {
 .dud {
   color: #757575;
 }
+
+.NavItem {
+  text-decoration: none;
+  color: #111;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 1vw;
+  transition: all 200ms ease-in;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .NavItem {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    z-index: 6;
+  }
+}
+
+.NavItem:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: goldenrod;
+    height: 1px;
+    transition: all 0.4s ease-in;
+  }
+.NavItem:hover {
+    color: goldenrod;
+}
+.NavItem:hover:after {
+      width: 100%;
+    }
+  
+.NavBox {
+    display: flex;
+  height: 900px;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+@media (max-width: 768px) {
+    .NavBox {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 15vh;
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+    top: 80px;
+    padding-bottom: 100%;
+    }
+  }
+  .tl-edges {
+  overflow-y: hidden;
+  }

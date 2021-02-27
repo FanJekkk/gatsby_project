@@ -3,7 +3,7 @@ import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 
 const Navigation = styled.nav`
-  height: 15%;
+  height: 80px;
   width: 100%;
   display: flex;
   background-color: #fff;
@@ -18,9 +18,10 @@ const Navigation = styled.nav`
   align-self: center;
   @media (max-width: 768px) {
     position: fixed;
-    height: 10%;
+    height: 80px;
     top: 0;
     right: 0;
+    padding-bottom: 80px;
   }
 `
 
@@ -52,7 +53,7 @@ const Navbox = styled.div`
     padding-top: 15vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 10vh;
     right: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -92,12 +93,12 @@ const Navbar = () => {
     <Navigation>
       <Toggle
         navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
+        onClick={() => setNavbarOpen(!navbarOpen)} 
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
       </Toggle>
       {navbarOpen ? (
-        <Navbox>
+        <Navbox className = "Navbox">
           <NavbarLinks />
         </Navbox>
       ) : (
