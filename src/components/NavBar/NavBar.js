@@ -10,17 +10,17 @@ const Navigation = styled.nav`
   position: fixed;
   justify-content: space-between;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 10vw;
   top:0;
-  z-index: 2;
+  z-index: 101;
   align-self: center;
   @media (max-width: 768px) {
     position: fixed;
     height: 80px;
     top: 0;
     right: 0;
+    z-index: 101;
     padding-bottom: 80px;
   }
 `
@@ -32,9 +32,11 @@ const Toggle = styled.div`
   padding: 0 8vw;
   position: absolute;
   right: 5%;
+  z-index: 101;
   @media (max-width: 768px) {
     display: flex;
     padding-left: 0px;
+    z-index: 101;
   }
 `
 
@@ -45,15 +47,17 @@ const Navbox = styled.div`
   align-items: center;
   position: absolute;
   right: 20px;
+  z-index: 101;
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
     width: 100%;
+    z-index: 101;
     justify-content: flex-start;
     padding-top: 15vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 10vh;
+    top: 8vh;
     right: ${props => (props.open ? "-100%" : "0")};
   }
 `

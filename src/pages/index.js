@@ -7,11 +7,28 @@ import Rotate from "react-reveal/Rotate"
 import Slide from "react-reveal/Slide"
 import ScrollAnimation from 'react-animate-on-scroll'
 import ReactRotatingText from 'react-rotating-text'
+import Wave from "react-wavify"
 
 
 const textArray = ['программный инженер', 'инженер данных', 'бизнес-аналитик', 'аналитик данных']
 const Home = () => (
   <Layout>
+    <div style = {{ paddingTop: '30px', backgroundColor: 'white'}}>
+      <Wave fill="url(#gradient)"  options={{
+          height: 35,
+          amplitude: 25,
+          speed: 0.25,
+          points: 3
+        }}>
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="10%"  stopColor="#000428" />
+      <stop offset="90%" stopColor="#00006f" />
+    </linearGradient>
+  </defs>
+</Wave>
+  </div>
+  <div className = "Wave1"></div>
     <div className = "HomePage">
     <SEO title="Главная" />
     
@@ -22,17 +39,9 @@ const Home = () => (
           <h2>И я <ReactRotatingText items={textArray} /></h2>
     <p>Добро пожаловать на сайт</p>
     <p>Now go build something great.</p>
-    
-    <p>
-                  I'm a <br />
-                  <h1 className="text-2xl text-gray-600 md:text-4xl lg:text-6xl lg:tracking-wider">
-                  <ReactRotatingText items={textArray} />
-                </h1>
-                </p>
     </div>
     </Slide>
-     
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div style={{ maxWidth: `300px`, margin: '0 auto'}}>
       <Image />
     </div>
     

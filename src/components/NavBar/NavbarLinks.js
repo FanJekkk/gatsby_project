@@ -8,12 +8,12 @@ const NavbarLinks = () => {
       <AniLink paintDrip to="/" hex="#00006f" className = "NavItem">
       Главная
       </AniLink>
-      <AniLink paintDrip to="/about" color="red" className = "NavItem">
+      <AniLink paintDrip to="/about" hex="#de2d3e" className = "NavItem">
       Обо мне
       </AniLink>
-      <AniLink paintDrip to="/contact" color="black" className = "NavItem">Контакты
+      <AniLink paintDrip to="/projects" hex="#7209b7" className = "NavItem">Проекты
       </AniLink>
-      <AniLink paintDrip to="/projects" color="blue" className = "NavItem">Проекты
+      <AniLink paintDrip to="/contact" hex="#4361EE" className = "NavItem">Контакты
       </AniLink>
     </>
   )
