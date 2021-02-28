@@ -687,3 +687,17 @@ pre tt:after {
   .tl-edges {
   overflow-y: hidden;
   }
+  .FirstContainer {
+    padding-top: 50px;
+  }
+  @media (max-width: 768px) {
+    .FirstContainer {
+    padding-top: 30px;
+  }
+}
+
+.HomePage {
+  background-color: #000428;
+  color: white;
+  padding-top: 50px;
+}

@@ -12,15 +12,17 @@ import ReactRotatingText from 'react-rotating-text'
 const textArray = ['программный инженер', 'инженер данных', 'бизнес-аналитик', 'аналитик данных']
 const Home = () => (
   <Layout>
-    <SEO title="Home" />
+    <div className = "HomePage">
+    <SEO title="Главная" />
     
     <Slide left cascade>
-    <div style={{marginLeft: '100px'}}>
+    <div style={{marginLeft: '20px'}}>
           <h1>Привет!</h1>
-          <h2>TEST TEST TEST</h2>
+          <h2>Меня зовут Денис</h2>
           <h2>И я <ReactRotatingText items={textArray} /></h2>
-    <p>Welcome to your new Gatsby site.</p>
+    <p>Добро пожаловать на сайт</p>
     <p>Now go build something great.</p>
+    
     <p>
                   I'm a <br />
                   <h1 className="text-2xl text-gray-600 md:text-4xl lg:text-6xl lg:tracking-wider">
@@ -67,6 +69,7 @@ const Home = () => (
   </h1>
 </Slide>
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+  </div>
   </Layout>
   
 )
