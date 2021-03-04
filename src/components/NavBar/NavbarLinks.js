@@ -8,7 +8,7 @@ const NavbarLinks = () => {
       <AniLink paintDrip to="/" hex="#00006f" className = "NavItem">
       Главная
       </AniLink>
-      <AniLink paintDrip to="/about" hex="#de2d3e" className = "NavItem">
+      <AniLink paintDrip to="/about" hex="#9d316e" className = "NavItem">
       Обо мне
       </AniLink>
       <AniLink paintDrip to="/projects" hex="#7209b7" className = "NavItem">Проекты
