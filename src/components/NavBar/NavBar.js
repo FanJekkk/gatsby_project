@@ -13,14 +13,14 @@ const Navigation = styled.nav`
   margin: 0 auto;
   padding: 0 10vw;
   top:0;
-  z-index: 101;
+  z-index: 104;
   align-self: center;
   @media (max-width: 768px) {
     position: fixed;
     height: 80px;
     top: 0;
     right: 0;
-    z-index: 101;
+    z-index: 104;
     padding-bottom: 80px;
   }
 `
