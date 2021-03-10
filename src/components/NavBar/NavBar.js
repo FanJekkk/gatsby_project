@@ -32,11 +32,11 @@ const Toggle = styled.div`
   padding: 0 8vw;
   position: absolute;
   right: 5%;
-  z-index: 101;
+  z-index: 105;
   @media (max-width: 768px) {
     display: flex;
     padding-left: 0px;
-    z-index: 101;
+    z-index: 105;
   }
 `
 
@@ -46,7 +46,7 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  right: 20px;
+  right: 0;
   z-index: 101;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -55,11 +55,16 @@ const Navbox = styled.div`
     z-index: 101;
     justify-content: flex-start;
     padding-top: 15vh;
-    background-color: #fff;
-    transition: all 0.3s ease-in;
-    top: 8vh;
-    right: ${props => (props.open ? "-100%" : "0")};
+    transition: 0.5s;
+    bottom: ${props => (props.open ? "100%" : "0")};
+    background-color: white;
+    transform: ${props => (props.open ? "translateY(-100%);" : "0")};
+    opacity: ${props => (props.open ? "0" : "1")};
+    border-radius:${props => (props.open ? "50%" : "0")};
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    
   }
+
 `
 
 const Hamburger = styled.div`

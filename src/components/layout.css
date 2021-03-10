@@ -669,7 +669,7 @@ pre tt:after {
   align-items: center;
   position: absolute;
   right: 20px;
-  z-index: 101;
+  z-index: 105;
 }
 @media (max-width: 768px) {
     .NavBox {
@@ -680,7 +680,7 @@ pre tt:after {
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 80px;
-    z-index: 101;
+    z-index: 105;
     }
   }
   .tl-edges {

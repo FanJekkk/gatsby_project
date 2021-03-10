@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const NavbarLinks = () => {
   return (
-    <>
+    <> 
       <AniLink paintDrip to="/" hex="#00006f" className = "NavItem">
       Главная
       </AniLink>
