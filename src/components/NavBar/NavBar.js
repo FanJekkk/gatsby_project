@@ -39,7 +39,7 @@ const Toggle = styled.div`
     z-index: 105;
   }
 `
-
+   
 const Navbox = styled.div`
   display: flex;
   height: 100%;
