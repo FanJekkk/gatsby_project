@@ -703,6 +703,7 @@ pre tt:after {
   text-align: center; 
   align-items: center;
   margin: 0 auto;
+  z-index: 3;
 
 }
 
@@ -716,6 +717,7 @@ pre tt:after {
   text-align: center; 
   align-items: center;
   margin: 0 auto;
+  z-index: 3;
     
 }
 
@@ -729,6 +731,7 @@ pre tt:after {
   text-align: center; 
   align-items: center;
   margin: 0 auto;
+  z-index:3;
 }
 
 .ContactPage {
@@ -741,6 +744,7 @@ pre tt:after {
   text-align: center; 
   align-items: center;
   margin: 0 auto;
+  z-index:3;
 }
 
 .Wave1 {
@@ -762,6 +766,11 @@ pre tt:after {
   }
 }
 
-.Navigation {
+.Nv {
   position: fixed;
 }
+
+
+.tl-wrapper-status--entered {
+  transform: none !important;
+  }
