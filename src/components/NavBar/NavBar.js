@@ -6,7 +6,6 @@ const Navigation = styled.nav`
   height: 80px;
   width: 100%;
   display: flex;
-  background-color: #fff;
   position: fixed;
   justify-content: space-between;
   text-transform: uppercase;
@@ -68,31 +67,41 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: ${props => (props.open ? "#111" : "#fff")};
   width: 30px;
   height: 3px;
   transition: all .3s linear;
   align-self: center;
   position: fixed;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-  ::before,
+  ::before {
+    width: 30px;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #111;
+    transition: all 0.3s linear;
+  }
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
     content: "";
     position: absolute;
+    background-color: #111;
     transition: all 0.3s linear;
   }
   ::before {
     transform: ${props =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
+    background-color: ${props =>
+      props.open ? "#111" : "#fff"}; ;
   }
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
+    background-color: #fff;
   }
 `
 const Navbar = () => {
