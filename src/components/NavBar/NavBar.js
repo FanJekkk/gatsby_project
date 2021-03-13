@@ -36,6 +36,7 @@ const Toggle = styled.div`
     display: flex;
     padding-left: 0px;
     z-index: 105;
+    right: 12%;
   }
 `
    
@@ -53,7 +54,7 @@ const Navbox = styled.div`
     width: 100%;
     z-index: 101;
     justify-content: flex-start;
-    padding-top: 15vh;
+    padding-top: 18vh;
     transition: 0.5s;
     bottom: ${props => (props.open ? "100%" : "0")};
     background-color: white;
@@ -68,15 +69,15 @@ const Navbox = styled.div`
 
 const Hamburger = styled.div`
   background-color: ${props => (props.open ? "#111" : "#fff")};
-  width: 30px;
-  height: 3px;
+  width: ${props => (props.open ? "50px" : "40px")};
+  height: 2px;
   transition: all .3s linear;
   align-self: center;
   position: fixed;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
   ::before {
-    width: 30px;
-    height: 3px;
+    width: 50px;
+    height: 2px;
     content: "";
     position: absolute;
     background-color: #111;
@@ -84,7 +85,7 @@ const Hamburger = styled.div`
   }
   ::after {
     width: 30px;
-    height: 3px;
+    height: 2px;
     content: "";
     position: absolute;
     background-color: #111;
@@ -109,11 +110,12 @@ const Navbar = () => {
 
   return (
     <Navigation>
+      
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)} 
       >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        {navbarOpen ? <Hamburger open /> : <Hamburger /> }
       </Toggle>
       {navbarOpen ? (
         <Navbox className = "Navbox">
