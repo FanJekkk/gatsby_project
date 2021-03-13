@@ -28,7 +28,6 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 8vw;
   position: absolute;
   right: 5%;
   z-index: 105;
@@ -36,7 +35,8 @@ const Toggle = styled.div`
     display: flex;
     padding-left: 0px;
     z-index: 105;
-    right: 12%;
+    right: 5%;
+    width: 45px;
   }
 `
    
@@ -54,7 +54,7 @@ const Navbox = styled.div`
     width: 100%;
     z-index: 101;
     justify-content: flex-start;
-    padding-top: 18vh;
+    padding-top: 20%;
     transition: 0.5s;
     bottom: ${props => (props.open ? "100%" : "0")};
     background-color: white;
@@ -69,14 +69,15 @@ const Navbox = styled.div`
 
 const Hamburger = styled.div`
   background-color: ${props => (props.open ? "#111" : "#fff")};
-  width: ${props => (props.open ? "50px" : "40px")};
+  width: ${props => (props.open ? "45px" : "30px")};
   height: 2px;
   transition: all .3s linear;
   align-self: center;
   position: fixed;
+  direction: rtl;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
   ::before {
-    width: 50px;
+    width: 45px;
     height: 2px;
     content: "";
     position: absolute;
@@ -84,7 +85,7 @@ const Hamburger = styled.div`
     transition: all 0.3s linear;
   }
   ::after {
-    width: 30px;
+    width: 15px;
     height: 2px;
     content: "";
     position: absolute;
