@@ -37,6 +37,9 @@ const Toggle = styled.div`
     z-index: 105;
     right: 5%;
     width: 45px;
+    direction: rtl;
+    -webkit-tap-highlight-color: transparent;
+
   }
 `
    
