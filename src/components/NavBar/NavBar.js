@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
+import Logo from "../../images/logo.png"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Navigation = styled.nav`
   height: 80px;
@@ -10,10 +12,12 @@ const Navigation = styled.nav`
   justify-content: space-between;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 0 10vw;
+  padding-left: 8%;
   top:0;
   z-index: 104;
   align-self: center;
+  color: white;
+  font-family: Arial, serif;
   @media (max-width: 768px) {
     position: fixed;
     height: 80px;
@@ -21,6 +25,8 @@ const Navigation = styled.nav`
     right: 0;
     z-index: 104;
     padding-bottom: 80px;
+    color: white;
+    font-family: Arial, serif;
   }
 `
 
@@ -29,13 +35,12 @@ const Toggle = styled.div`
   height: 100%;
   cursor: pointer;
   position: absolute;
-  right: 5%;
   z-index: 105;
   @media (max-width: 768px) {
     display: flex;
     padding-left: 0px;
     z-index: 105;
-    right: 5%;
+    right: 8%;
     width: 45px;
     direction: rtl;
     -webkit-tap-highlight-color: transparent;
@@ -49,12 +54,13 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  right: 0;
+  right: 8%;
   z-index: 101;
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
     width: 100%;
+    right: 0;
     z-index: 101;
     justify-content: flex-start;
     padding-top: 20%;
@@ -114,7 +120,16 @@ const Navbar = () => {
 
   return (
     <Navigation>
-      
+      <AniLink paintDrip to="/" hex="#00006f" className = "logo"
+        >
+          <img className= "logo" width="150" height="50" src={Logo} alt="logo" />
+          {/* <h2
+            className="magic-hover magic-hover__square"
+            style={{ lineHeight: "1.4rem" }}
+          >
+            Teplyak
+          </h2> */}
+      </AniLink>
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)} 

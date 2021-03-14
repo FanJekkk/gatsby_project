@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:black;
-  font-family: georgia, serif;
+  font-family: Poppins, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -75,6 +75,8 @@ dfn {
 
 .logo {
   float: left;
+  margin-top: 10px;
+  color: white;
 
 }
 
@@ -87,7 +89,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Poppins,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
