@@ -1,6 +1,6 @@
 import React from 'react'
 
 export default ({ children }) => (
-  <div className = "FirstContainer">{children}</div>
+  <div className = "Firstcontainer">{children}</div>
   
 )

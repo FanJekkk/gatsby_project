@@ -105,6 +105,7 @@ const Hamburger = styled.div`
     transform: ${props =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
+    right: 0;
     background-color: ${props =>
       props.open ? "#111" : "#fff"}; ;
   }
@@ -112,6 +113,7 @@ const Hamburger = styled.div`
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
+    right:0;
     background-color: #fff;
   }
 `

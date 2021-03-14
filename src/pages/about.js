@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const About = () => (
   <Layout>
-    <div className = "AboutPage">
+    <div className = "AboutPage container-lg">
     <SEO title="Обо мне" />
     <h1>Добро пожаловать на страницу обо мне!</h1>
     <p>Welcome to About page!</p>

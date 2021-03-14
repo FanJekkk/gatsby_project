@@ -4,9 +4,8 @@
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react"
-
 import Container from "./container"
 import "./layout.css"
 import Header from './header'
