@@ -1,63 +1,50 @@
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import Slide from "react-reveal/Slide"
 import ReactRotatingText from 'react-rotating-text'
 import React from 'react'
 import Scramble from 'react-scramble'
 
 
 
-const textArray = ['программный инженер', 'инженер данных', 'бизнес-аналитик', 'аналитик данных']
+
+
+const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Программный инженер']
 const Home = () => (
   <Layout>
     <div className = "HomePage container-lg">
       <div className="row">
     <SEO title="Главная" />
+    <div className="col-lg-3 col-md-3 col-sm-3"></div>
       <div className="col-lg-6 col-md-6 col-sm-6">
-    <Slide left cascade>
     <div>
-          <h1><Scramble
+          <h3 className="NameSpace"><Scramble
         autoStart
-        text="Привет!"
+        text="Денис Тепляков"
         steps={[
           {
-            roll: 40,
+            roll: 15,
             action: '+',
             type: 'all',
           },
           {
             action: '-',
-            type: 'forward',
+            type: 'random',
           },
         ]}
-      /></h1>
-          <h2><Scramble
-        autoStart
-        text="Меня зовут Денис"
-        steps={[
-          {
-            roll: 40,
-            action: '+',
-            type: 'all',
-          },
-          {
-            action: '-',
-            type: 'forward',
-          },
-        ]}
-      /></h2>
-          <h2>Я <ReactRotatingText items={textArray} /></h2>
-    <p>Добро пожаловать на сайт</p>
-    <p>Now go build something great.</p>
+      /></h3><span class="intro__title-line intro__title-line--entered"></span>
+          
+          <h2><ReactRotatingText items={textArray} /></h2>
     </div>
-    </Slide>
     </div>
+    <div className="col-lg-3 col-md-3 col-sm-3"></div>
+    <div className="col-lg-6 col-md-6 col-sm-6"></div>
     <div className="col-lg-6 col-md-6 col-sm-6">
     <div style={{ maxWidth: `300px`, margin: '0 auto'}}>
       <Image />
     </div>
     </div>
+    
     <p>Now go build something great.</p>
     <p>Now go build something great.</p>
     <p>Now go build something great.</p>

@@ -35,8 +35,6 @@ const Toggle = styled.div`
   height: 100%;
   cursor: pointer;
   position: absolute;
-  z-index: 105;
-  @media (max-width: 768px) {
     display: flex;
     padding-left: 0px;
     z-index: 105;
@@ -45,7 +43,7 @@ const Toggle = styled.div`
     direction: rtl;
     -webkit-tap-highlight-color: transparent;
 
-  }
+  
 `
    
 const Navbox = styled.div`
@@ -56,23 +54,23 @@ const Navbox = styled.div`
   position: absolute;
   right: 8%;
   z-index: 101;
-  @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
     width: 100%;
     right: 0;
     z-index: 101;
     justify-content: flex-start;
-    padding-top: 20%;
+    padding-top: 4%;
     transition: 0.5s;
     bottom: ${props => (props.open ? "100%" : "0")};
     background-color: white;
+    opacity: 0.5;
     transform: ${props => (props.open ? "translateX(100%);" : "0")};
     opacity: ${props => (props.open ? "0" : "1")};
     border-radius:${props => (props.open ? "50%" : "0")};
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
     
-  }
+  
 
 `
 
