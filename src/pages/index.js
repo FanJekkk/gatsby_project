@@ -16,7 +16,7 @@ const Home = () => (
     <SEO title="Главная" />
       <div className="col-lg-6 col-md-6 col-sm-6">
     <Slide left cascade>
-    <div style={{marginLeft: '20px'}}>
+    <div>
           <h1><Scramble
         autoStart
         text="Привет!"

@@ -67,7 +67,7 @@ const Navbox = styled.div`
     transition: 0.5s;
     bottom: ${props => (props.open ? "100%" : "0")};
     background-color: white;
-    transform: ${props => (props.open ? "translateY(-100%);" : "0")};
+    transform: ${props => (props.open ? "translateX(100%);" : "0")};
     opacity: ${props => (props.open ? "0" : "1")};
     border-radius:${props => (props.open ? "50%" : "0")};
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
@@ -75,6 +75,7 @@ const Navbox = styled.div`
   }
 
 `
+
 
 const Hamburger = styled.div`
   background-color: ${props => (props.open ? "#111" : "#fff")};

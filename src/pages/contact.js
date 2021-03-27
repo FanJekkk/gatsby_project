@@ -6,7 +6,8 @@ import SEO from "../components/seo"
 
 const Contact= () => (
   <Layout>
-    <div className = "ContactPage">
+    <div className = "ContactPage container-lg">
+      <div className="row">
     <SEO title="Контакты" />
     <h1>Добро пожаловать на страницу для контакта со мной!</h1>
     <p>Welcome to Contact page</p>
@@ -23,6 +24,7 @@ const Contact= () => (
     <p>Welcome to page 2</p>
     <h1>Hi from the Projects page</h1>
     <p>Welcome to page 2</p>
+    </div>
     </div>
   </Layout>
 )

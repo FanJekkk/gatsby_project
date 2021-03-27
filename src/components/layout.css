@@ -683,6 +683,18 @@ pre tt:after {
   overflow-y: hidden;
   }
 
+  @media (max-width: 768px) {
+    .NavBox1 {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: grey;
+    transition: all 0.3s ease-in;
+    z-index: 105;
+    }
+  }
+
 
 .HomePage {
   background-color:#00006f;
@@ -717,7 +729,7 @@ pre tt:after {
       linear-gradient(45deg, #9d316e, #de2d3e);
     background-size: cover;
     color: white;
-  padding-top: 50px;
+  padding-top: 150px;
   text-align: center; 
   align-items: center;
   margin: 0 auto;
@@ -726,17 +738,50 @@ pre tt:after {
     
 }
 
+@media (max-width: 768px) {
+  .AboutPage {
+    background: #9d316e;
+    background: url(${lineSvg}) center center fixed,
+      linear-gradient(45deg, #9d316e, #de2d3e);
+    background-size: cover;
+    color: white;
+  padding-top: 100px;
+  text-align: center; 
+  align-items: center;
+  margin: 0 auto;
+  z-index: 3;
+  max-width: 100%;
+  
+  }
+}
+
 .ProjectPage {
   background: #560bad;
     background: url(${lineSvg}) center center fixed,
       linear-gradient(45deg, #560bad, #7209b7);
     background-size: cover;
     color: white;
-  padding-top: 50px;
+  padding-top: 100px;
   text-align: center; 
   align-items: center;
   margin: 0 auto;
   z-index:3;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ProjectPage {
+    background: #560bad;
+    background: url(${lineSvg}) center center fixed,
+      linear-gradient(45deg, #560bad, #7209b7);
+    background-size: cover;
+    color: white;
+  padding-top: 100px;
+  text-align: center; 
+  align-items: center;
+  margin: 0 auto;
+  z-index:3;
+  }
 }
 
 .ContactPage {
@@ -745,7 +790,7 @@ pre tt:after {
       linear-gradient(45deg, #4361EE, #4895EF);
     background-size: cover;
     color: white;
-  padding-top: 50px;
+  padding-top: 150px;
   text-align: center; 
   align-items: center;
   margin: 0 auto;
