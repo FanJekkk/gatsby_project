@@ -607,10 +607,7 @@ pre tt:after {
 
 
 
-@media (max-width: 768px) {
- header {
- }
-}
+
 
 .text {
   font-weight: 100;
@@ -794,6 +791,7 @@ pre tt:after {
   align-items: center;
   margin: 0 auto;
   z-index:3;
+  max-width: 100%;
 }
 
 .Wave1 {
@@ -838,7 +836,7 @@ pre tt:after {
   content: "";
   height: 2px;
   background: rgba(255,255,255,0.3);
-  width: 50%;
+  width: 300px;
   display: flex;
   animation-duration: .8s;
   animation-delay: 1s;

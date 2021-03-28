@@ -33,6 +33,7 @@
     "react-reveal": "^1.2.2",
     "react-rotating-text": "^1.4.1",
     "react-scramble": "^0.4.2",
+    "react-three": "^0.9.7",
     "react-three-fiber": "^5.3.19",
     "react-wavify": "^1.5.2",
     "smooth-scrollbar": "^8.5.3",

@@ -11,6 +11,7 @@ import "./layout.css"
 import Header from './header'
 import NavBar from "./NavBar/NavBar"
 
+
 const Layout = ({ children }) => {
 
   return (

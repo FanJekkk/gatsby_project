@@ -7,8 +7,6 @@ import Scramble from 'react-scramble'
 
 
 
-
-
 const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Программный инженер']
 const Home = () => (
   <Layout>

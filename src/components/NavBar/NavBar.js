@@ -54,21 +54,17 @@ const Navbox = styled.div`
   position: absolute;
   right: 8%;
   z-index: 101;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    right: 0;
-    z-index: 101;
-    justify-content: flex-start;
-    padding-top: 4%;
-    transition: 0.5s;
-    bottom: ${props => (props.open ? "100%" : "0")};
-    background-color: white;
-    opacity: 0.5;
-    transform: ${props => (props.open ? "translateX(100%);" : "0")};
-    opacity: ${props => (props.open ? "0" : "1")};
-    border-radius:${props => (props.open ? "50%" : "0")};
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  justify-content: flex-start;
+  padding-top: 4%;
+  transition: 0.5s;
+  background-color: white;
+  transform: ${props => (props.open ? "translateY(-100%);" : "0")};
+  opacity: ${props => (props.open ? "0" : "1")};
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
     
   
 
