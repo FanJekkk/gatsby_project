@@ -9,11 +9,12 @@ const About = () => (
     <div className = "AboutPage container-lg">
       <div className="row">
     <SEO title="Обо мне" />
-    <div className="col-lg-6 col-md-6 col-sm-6">
+    <div className="col-lg-3 col-md-3 col-sm-3"></div>
+    <div className="col-lg-3 col-md-3 col-sm-3">
     <h1>Добро пожаловать на страницу обо мне!</h1>
     <p>Welcome to About page!</p>
     </div>
-    <div className="col-lg-6 col-md-6 col-sm-6">
+    <div className="col-lg-3 col-md-3 col-sm-3">
     <Link to="/">Go back to the homepage</Link>
     <h1>Hi from the About page</h1>
     <p>Welcome to page 3</p><h1>Hi from the About page</h1>
@@ -29,6 +30,7 @@ const About = () => (
     <p>Welcome to page 3</p><h1>Hi from the About page</h1>
     <p>Welcome to page 3</p>
     </div>
+    <div className="col-lg-3 col-md-3 col-sm-3"></div>
     </div>
     </div>
   </Layout>

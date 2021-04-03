@@ -21,6 +21,7 @@
     "hamburger-react": "^2.4.0",
     "jquery": "^3.6.0",
     "node-sass": "^5.0.0",
+    "pngquant-bin": "^3.1.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
@@ -43,6 +44,7 @@
     "vanta": "^0.5.21"
   },
   "devDependencies": {
+    "imagemin-pngquant": "^5.0.1",
     "prettier": "2.2.1"
   },
   "keywords": [
