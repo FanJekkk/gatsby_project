@@ -7,7 +7,12 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "contentful": "^8.2.0",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^4.0.0",
+    "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
+    "formik": "^2.2.6",
+    "fs": "^0.0.1-security",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.12.1",

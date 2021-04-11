@@ -706,6 +706,7 @@ pre tt:after {
   min-width: 100%;
   min-height: 100%;
   position: relative;
+  min-height: 100vh;
 
 }
 @media (max-width: 768px) {
@@ -719,6 +720,7 @@ pre tt:after {
     align-items: center;
     margin: 0 auto;
     z-index: 3;
+    min-height: 100vh;
   
   }
 }
@@ -735,6 +737,7 @@ pre tt:after {
   margin: 0 auto;
   z-index: 3;
   max-width: 100%;
+  min-height: 100vh;
     
 }
 
@@ -751,6 +754,7 @@ pre tt:after {
   margin: 0 auto;
   z-index: 3;
   max-width: 100%;
+  min-height: 100vh;
   
   }
 }
@@ -762,6 +766,7 @@ pre tt:after {
     background-size: cover;
     color: white;
   padding-top: 100px;
+  min-height: 100vh;
   text-align: center; 
   align-items: center;
   margin: 0 auto;
@@ -776,6 +781,7 @@ pre tt:after {
       linear-gradient(45deg, #560bad, #7209b7);
     background-size: cover;
     color: white;
+  min-height: 100vh;
   padding-top: 100px;
   text-align: center; 
   align-items: center;
@@ -790,6 +796,7 @@ pre tt:after {
       linear-gradient(45deg, #4361EE, #4895EF);
     background-size: cover;
     color: white;
+    min-height: 100vh;
   padding-top: 150px;
   text-align: center; 
   align-items: center;

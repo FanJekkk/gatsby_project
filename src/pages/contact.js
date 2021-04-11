@@ -1,8 +1,31 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import emailjs from 'emailjs-com';
+
+console.log(process.env.GATSBY_API_URL);
+console.log (123)
+function sendEmail(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('', '', e.target,'')
+    .then((result) => {
+        console.log(result);
+        if (result.status === 200) {
+          console.log('TEST')
+          alert(
+            "Email send successfully!"
+          );
+        return
+        }
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset();
+}
 
 const Contact= () => (
+  
   <Layout>
     <div className = "ContactPage container-lg">
       <div className="row">
@@ -12,118 +35,35 @@ const Contact= () => (
     <h1>Добро пожаловать на страницу для контакта со мной!</h1>
     <p>Welcome to Contact page</p>
     </div>
-    <div
-      className="contactBody"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
-      }}
-    >
-     
-
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        className="formContainer"
-      >
-        <input type="hidden" name="form-name" value="contact"></input>
-        <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
-          <div className="sub_line_wrap">
-            <div
-              className="sub_line1"
-            >
-              Send me a
-            </div>
-          </div>
-          <div className="sub_line_wrap">
-            <div
-              className="sub_line2"
-            >
-              message{" "}
-              <a
-                href="mailto:makintomo04@hotmail.co.uk"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i style={{ color: "red" }} class="fab fa-telegram-plane"></i>
-              </a>
-            </div>
-          </div>
-        </h2>
-        <div className="formWrapper">
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="name">Name</label>
-            <input
-              className="inputs"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter name"
-              required
-            ></input>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="email">Email</label>
-            <input
-              className="inputs"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter email"
-              required
-            ></input>
-          </div>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            cols="50"
-            placeholder="Enter your message"
-            style={{ height: "150px" }}
-            required
-          ></textarea>
-        </div>
-        <input
-          className="button"
-          type="submit"
-        ></input>
-      </form>
-    </div>
     <div className="col-lg-4 col-md-4 col-sm-4">
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
-    <h1>Hi from the Projects page</h1>
-    <p>Welcome to page 2</p>
+      <form method="post" action="/success" onSubmit={sendEmail} netlify-honeypot="number" data-netlify="true" name="contact" className="grid grid-cols-1 gap-8 lg:col-start-8 lg:col-span-8">
+          <input type="hidden" name="number" />
+          <input type="hidden" name="form-name" value="contact" placeholder= "Name"/>
+          
+            <label className="block p-4 text-f4" htmlFor="name">Имя</label>
+            <input type="text" name="name" id="name" className="form-control"  placeholder= "Имя" required />
+            <label className="block p-4  text-f4" htmlFor="email">Почта</label>
+            <input type="email" name="email" id="email" className="form-control" placeholder= "Почта" required />
+           <label className=" block p-4 text-f4" htmlFor="message">Письмо</label>
+            <textarea name="message" id="message" rows="5" className="form-control"  placeholder= "Текст"  required></textarea>
+          
+          <button type="submit" className="btn btn-success bg-tumbleweed hover:bg-sidecar text-prussian font-bold font-title lowercase px-4 py-4 rounded-md transition">Send</button>
+          <div className='form-message-container'>
+              <p>
+                Thank you for the message!
+              </p>
+
+            
+            </div>{' '}      
+        </form>
+
+    </div>
+    </div>
+
     </div>
     <div className="col-lg-2 col-md-2 col-sm-2"></div>
-    </div>
-    </div>
+    
+
   </Layout>
 )
 

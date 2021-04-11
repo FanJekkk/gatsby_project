@@ -4,7 +4,10 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
+
 const Projects = () => (
+  
   <Layout>
     <div className = "ProjectPage container-lg">
       <div className="row">
