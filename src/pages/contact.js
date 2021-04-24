@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import emailjs, { init }from 'emailjs-com';
 init(process.env.REACT_USERID);
 
-
+console.log(process.env.REACT_TEST)
   
 
 function sendEmail(e) {
