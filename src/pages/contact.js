@@ -2,11 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import emailjs, { init }from 'emailjs-com';
-init(process.env.GATSBY_USERID);
+init(process.env.REACT_USERID);
+
+
+  
 
 function sendEmail(e) {
   e.preventDefault();
-  emailjs.sendForm(process.env.GATSBY_SERVICE_ID, process.env.GATSBY_TEMPLATE_ID, e.target, process.env.GATSBY_USERID )
+  emailjs.sendForm(process.env.REACT_SERVICE_ID, process.env.REACT_TEMPLATE_ID, e.target, process.env.REACT_USERID )
     .then((result) => {
         console.log(result);
         if (result.status === 200) {
@@ -21,8 +24,10 @@ function sendEmail(e) {
     e.target.reset();
 }
 
-const Contact= () => (
-  
+
+const Contact= () => {
+
+  return(
   <Layout>
     <div className = "ContactPage container-lg">
       <div className="row">
@@ -33,7 +38,7 @@ const Contact= () => (
     <p>Welcome to Contact page</p>
     </div>
     <div className="col-lg-4 col-md-4 col-sm-4">
-      <form method="post" action="/success" onSubmit={sendEmail} netlify-honeypot="number" data-netlify="true" name="contact" className="grid grid-cols-1 gap-8 lg:col-start-8 lg:col-span-8">
+      <form method="post" action="/success" onSubmit={sendEmail}  data-netlify-recaptcha="true" netlify-honeypot="number" data-netlify="true" name="contact" className="grid grid-cols-1 gap-8 lg:col-start-8 lg:col-span-8">
           <input type="hidden" name="number" />
           <input type="hidden" name="form-name" value="contact" placeholder= "Name"/>
           
@@ -62,7 +67,7 @@ const Contact= () => (
     <div className="col-lg-2 col-md-2 col-sm-2"></div>
     
 
-  </Layout>
-)
+  </Layout>)};
+
 
 export default Contact
