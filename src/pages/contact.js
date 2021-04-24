@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import emailjs from 'emailjs-com';
-
+import emailjs, { init }from 'emailjs-com';
+init(process.env.GATSBY_USERID);
 
 function sendEmail(e) {
   e.preventDefault();
