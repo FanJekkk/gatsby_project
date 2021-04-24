@@ -2,15 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import emailjs, { init }from 'emailjs-com';
-init(process.env.REACT_USERID);
+init(process.env.GATSBY_USERID);
 
-console.log(process.env.REACT_TEST)
+console.log(process.env.GATSBY_TEST)
   
  
 
 function sendEmail(e) {
   e.preventDefault();
-  emailjs.sendForm(process.env.REACT_SERVICE_ID, process.env.REACT_TEMPLATE_ID, e.target, process.env.REACT_USERID )
+  emailjs.sendForm(process.env.GATSBY_SERVICE_ID, process.env.GATSBY_TEMPLATE_ID, e.target, process.env.GATSBY_USERID )
     .then((result) => {
         console.log(result);
         if (result.status === 200) {
