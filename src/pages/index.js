@@ -5,8 +5,6 @@ import ReactRotatingText from 'react-rotating-text'
 import React from 'react'
 import Scramble from 'react-scramble'
 
-
-
 const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Аналитик данных']
 const Home = () => (
   <Layout>
@@ -78,6 +76,7 @@ const Home = () => (
           strokeWidth="1"
         />
       </svg>
+  
       <p>Привет! Меня зовут Денис и я инженер данных .</p>
     </div>
     <div className="col-lg-3 col-md-3 col-sm-3">

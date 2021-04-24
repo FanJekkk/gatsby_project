@@ -3,20 +3,17 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import emailjs from 'emailjs-com';
 
-console.log(process.env.GATSBY_API_URL);
-console.log (123)
+
 function sendEmail(e) {
   e.preventDefault();
-
-  emailjs.sendForm('', '', e.target,'')
+  emailjs.sendForm(process.env.GATSBY_SERVICE_ID, process.env.GATSBY_TEMPLATE_ID, e.target, process.env.GATSBY_USERID )
     .then((result) => {
         console.log(result);
         if (result.status === 200) {
-          console.log('TEST')
           alert(
             "Email send successfully!"
           );
-        return
+        return 
         }
     }, (error) => {
         console.log(error.text);
@@ -53,8 +50,9 @@ const Contact= () => (
                 Thank you for the message!
               </p>
 
+
             
-            </div>{' '}      
+            </div>     
         </form>
 
     </div>
