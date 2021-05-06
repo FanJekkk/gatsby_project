@@ -692,9 +692,9 @@ pre tt:after {
 
 
   .navigation.active {
-    background-color: black;
+    background-color: #00006f;
     opacity: 1;
-    box-shadow: 0 2px 4px 2 rgba(0,0,0,.2);
+    border-bottom:black 2px;
     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
   }
