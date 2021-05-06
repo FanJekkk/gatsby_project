@@ -126,7 +126,8 @@ const Navbar = () => {
     }
     console.log(window.scrollY);
   };
-  window.addEventListener('scroll',changeBackground);
+  const isBrowser = () => typeof window !== "undefined"
+  isBrowser() && window.addEventListener('scroll',changeBackground);
   return (
     <Navigation className = {navbar ? 'navigation active' : 'navigation'}>
       <AniLink paintDrip to="/" hex="#00006f" className = "logo"
