@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Commissioner&family=Montserrat:wght@300&display=swap');
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -10,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:black;
-  font-family: Verdana, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -79,6 +81,7 @@ dfn {
   float: left;
   margin-top: 10px;
   color: white;
+  z-index: 99999;
 
 }
 
@@ -91,8 +94,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Poppins,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 14px;
@@ -270,8 +272,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 0.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: serif;
   text-rendering: optimizeLegibility;
   font-size: 1.825rem;
@@ -287,8 +288,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -304,8 +304,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -321,8 +320,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -338,8 +336,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -631,8 +628,8 @@ pre tt:after {
    margin-top: 80px;
     font-size: 1.5rem;
     z-index: 105;
-    color: #111;
-    font-family: Verdana, sans-serif;;
+    color: rgb(250, 249, 249);
+    font-family: 'Commissioner', sans-serif;
     -webkit-tap-highlight-color: transparent;
   
 }
@@ -677,6 +674,7 @@ pre tt:after {
     }
   }
   .tl-edges {
+  overflow: hidden;
   overflow-y: hidden;
   }
 
@@ -693,6 +691,14 @@ pre tt:after {
   }
 
 
+  .navigation.active {
+    background-color: black;
+    opacity: 1;
+    box-shadow: 0 2px 4px 2 rgba(0,0,0,.2);
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  }
+
 .HomePage {
   background:#00006f;
   background-size: cover;
@@ -702,7 +708,7 @@ pre tt:after {
   padding-top: 150px;
   margin: 0 auto;
   z-index: 3;
-  font-family: Verdana, sans-serif;
+  font-family: 'Commissioner', sans-serif;
   min-width: 100%;
   min-height: 100%;
   position: relative;
@@ -818,7 +824,7 @@ pre tt:after {
 .NameSpace {
   margin-top: 80px;
   color: rgba(255,255,255, 0.8);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Commissioner', sans-serif;
 }
 
 .intro__title-line--entered {

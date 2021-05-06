@@ -61,18 +61,17 @@ const Navbox = styled.div`
   justify-content: flex-start;
   padding-top: 4%;
   transition: 0.5s;
-  background-color: white;
+  background-color: black;
   transform: ${props => (props.open ? "translateY(-100%);" : "0")};
   opacity: ${props => (props.open ? "0" : "1")};
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-    
   
 
 `
 
 
 const Hamburger = styled.div`
-  background-color: ${props => (props.open ? "#111" : "#fff")};
+  background-color: #fff;
   width: ${props => (props.open ? "45px" : "30px")};
   height: 2px;
   transition: all .3s linear;
@@ -85,7 +84,7 @@ const Hamburger = styled.div`
     height: 2px;
     content: "";
     position: absolute;
-    background-color: #111;
+    background-color: #fff;
     transition: all 0.3s linear;
   }
   ::after {
@@ -93,7 +92,7 @@ const Hamburger = styled.div`
     height: 2px;
     content: "";
     position: absolute;
-    background-color: #111;
+    background-color: #fff;
     transition: all 0.3s linear;
   }
   ::before {
@@ -101,8 +100,7 @@ const Hamburger = styled.div`
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
     right: 0;
-    background-color: ${props =>
-      props.open ? "#111" : "#fff"}; ;
+    background-color: #fff;
   }
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
@@ -112,11 +110,25 @@ const Hamburger = styled.div`
     background-color: #fff;
   }
 `
+
+
+
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-
+  const [navbar, setNavbar] = useState(false)
+  const changeBackground = () => {
+    if(window.scrollY >= 80) {
+      setNavbar(true)
+  
+    }else {
+      setNavbar(false);
+    }
+    console.log(window.scrollY);
+  };
+  window.addEventListener('scroll',changeBackground);
   return (
-    <Navigation>
+    <Navigation className = {navbar ? 'navigation active' : 'navigation'}>
       <AniLink paintDrip to="/" hex="#00006f" className = "logo"
         >
           <img className= "logo" width="150" height="50" src={Logo} alt="logo" />

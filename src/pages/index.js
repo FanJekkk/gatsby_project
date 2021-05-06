@@ -2,8 +2,38 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import ReactRotatingText from 'react-rotating-text'
-import React from 'react'
+import React, { useRef, useState }  from 'react'
 import Scramble from 'react-scramble'
+import { Canvas, useRender, useFrame } from 'react-three-fiber';
+
+
+function Box(props) {
+  // This reference will give us direct access to the mesh
+  const mesh = useRef();
+
+  // Set up state for the hovered and active state
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+
+  // Rotate mesh every frame, this is outside of React without overhead
+  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
+
+  return (
+    <mesh
+      {...props}
+      ref={mesh}
+      scale={active ? [1, 1, 1] : [2, 2, 2]}
+      onClick={e => setActive(!active)}
+      onPointerOver={e => setHover(true)}
+      onPointerOut={e => setHover(false)}>
+      <boxBufferGeometry attach="geometry" args={[2, 2, 2]} />
+      <meshStandardMaterial
+        attach="material"
+        color={hovered ? 'hotpink' : 'orange'}
+      />
+    </mesh>
+  );
+}
 
 const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Аналитик данных']
 const Home = () => (
@@ -34,18 +64,23 @@ const Home = () => (
     </div>
     </div>
     <div className="col-lg-4 col-md-4 col-sm-4 p-4">
-    <div className= "p-5" maxwidth= "300px">
-      <Image />
+    <div className= "p-5" maxwidth= "900px" maxheight = "900px">
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[5, 5, 5]} />
+        <Box position={[0, 0, 0]} />
+      </Canvas>
     </div>
     </div>
     <div className="col-lg-2 col-md-2 col-sm-2">
     </div>
     <div className="col-lg-2 col-md-2 col-sm-2"></div>
     <div className="col-lg-4 col-md-4 col-sm-4">
+    
     <svg
         id="hello"
-        width="400px"
-        height="300px"
+        width="300px"
+        height="200px"
         viewBox="-5 0 291 91"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
