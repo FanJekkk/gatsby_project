@@ -79,7 +79,7 @@ dfn {
 
 .logo {
   float: left;
-  margin-top: 10px;
+  margin-top: 15px;
   color: white;
   z-index: 99999;
 
@@ -689,6 +689,10 @@ pre tt:after {
     z-index: 105;
     }
   }
+  .navigation {
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  }
 
 
   .navigation.active {
@@ -885,4 +889,84 @@ body, html {
   .FirstItem {
     margin-top: 30%;
   }
+}
+
+.logoanime1 {
+    width: 4.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border-left: 8px solid rgba(218,58,218,.7);
+    border-right: 8px solid rgba(26,171,238,.7);
+    transform: rotate(
+90deg
+);
+    filter: blur(1px);
+    z-index: 9998;
+    position: absolute;
+    animation:stretch 8s linear infinite;
+    animation-name: stretch;
+    animation-duration: 8s; 
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes stretch {
+  100% { -webkit-transform: rotate(450deg); 
+    transform:rotate(450deg); }
+}
+
+
+
+.logoanime2 {
+  width: 4.5em;
+  height: 3.5em;
+    border-radius: 50%;
+    border-left: 8px solid rgba(218,58,218,.4);
+    border-right: 8px solid rgba(26,238,157,.4);
+    filter: blur(1px);
+    z-index: 9999;
+    position: absolute;
+    animation:stretch1 5s linear infinite;
+    animation-name: stretch1;
+    animation-duration: 5s; 
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes stretch1 {
+  100% { -webkit-transform: rotate(360deg); 
+    transform:rotate(360deg); }
+}
+
+.logoanime3 {
+  width: 4.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  border-left: 8px solid rgba(218,58,218,.4);
+  border-right: 8px solid rgba(26,238,157,.4);
+  filter: blur(1px);
+  transform: rotate(
+    45deg
+    );
+  z-index: 9999;
+  position: absolute;
+  animation:stretch2 3s linear infinite;
+  animation-name: stretch2;
+  animation-duration: 3s; 
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch2 {
+100% { -webkit-transform: rotate(360deg); 
+  transform:rotate(405deg); }
 }

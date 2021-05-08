@@ -5,7 +5,7 @@ import Logo from "../../images/logo.png"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Navigation = styled.nav`
-  height: 80px;
+  height: 90px;
   width: 100%;
   display: flex;
   position: fixed;
@@ -20,7 +20,7 @@ const Navigation = styled.nav`
   font-family: Arial, serif;
   @media (max-width: 768px) {
     position: fixed;
-    height: 80px;
+    height: 90px;
     top: 0;
     right: 0;
     z-index: 104;
@@ -132,7 +132,12 @@ const Navbar = () => {
     <Navigation className = {navbar ? 'navigation active' : 'navigation'}>
       <AniLink paintDrip to="/" hex="#00006f" className = "logo"
         >
-          <img className= "logo" width="150" height="50" src={Logo} alt="logo" />
+          {/*<img className= "logo" width="150" height="50" src={Logo} alt="logo" />
+          
+        
+  */} <div className = "logoanime1"></div>
+  <div className = "logoanime2"></div>
+          <div className = "logoanime3"></div>
           {/* <h2
             className="magic-hover magic-hover__square"
             style={{ lineHeight: "1.4rem" }}
