@@ -755,7 +755,7 @@ pre tt:after {
   .AboutPage {
     background: #9d316e;
     background: url(${lineSvg}) center center fixed,
-      linear-gradient(45deg, #9d316e, #de2d3e);
+      linear-gradient(45deg, #9d316e, #9d316e);
     background-size: cover;
     color: white;
   padding-top: 100px;
@@ -969,4 +969,39 @@ body, html {
 @keyframes stretch2 {
 100% { -webkit-transform: rotate(360deg); 
   transform:rotate(405deg); }
+}
+
+#preloader {
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999999;
+  background-color: black;
+  opacity: 1;
+  display: block;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  animation: fade1  1s 3s forwards;
+  
+}
+
+@keyframes fade1 {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  
+  99% {
+    opacity: 0.4;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }

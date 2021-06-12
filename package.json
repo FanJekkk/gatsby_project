@@ -35,6 +35,7 @@
     "react-bootstrap": "^1.5.2",
     "react-decrypt-animation": "^1.0.0",
     "react-dom": "^16.14.0",
+    "react-fazer-animation": "^1.0.3",
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-is": "^17.0.2",
