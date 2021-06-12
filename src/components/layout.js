@@ -11,7 +11,10 @@ import Container from "./container"
 import "./layout.css"
 import Header from './header'
 import NavBar from "./NavBar/NavBar"
-import {FazerAnimation} from 'react-fazer-animation';
+import LottieLoader from 'react-lottie-loader'
+import rocket from './animation/rocket.json'
+
+
 
 
 
@@ -26,12 +29,7 @@ const Layout = ({ children }) => {
   return (
     
     <>{loader ?
-   <div id = "preloader">
-  <FazerAnimation
-    title={'Redirecting'}
-    bodyColor={'#FFFFFF'}
-    longfazersColor={'#FFFFFF'}
-  /></div> :<div><NavBar />
+      <div id = "preloader"><LottieLoader animationData={rocket} /> </div>:<div><NavBar />
         <Header />
         <Container>
         <main>{children}</main>

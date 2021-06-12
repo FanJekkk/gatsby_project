@@ -973,6 +973,8 @@ body, html {
 
 #preloader {
   position: fixed;
+  max-width: 300px;
+  max-height: 300px;
   /* координаты положения */
   left: 0;
   top: 0;
@@ -982,6 +984,7 @@ body, html {
   background-color: black;
   opacity: 1;
   display: block;
+  align-items: center;
   -webkit-transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -o-transition: opacity 2s ease-in-out;
