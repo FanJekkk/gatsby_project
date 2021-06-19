@@ -135,7 +135,10 @@ const Navbar = () => {
           {/*<img className= "logo" width="150" height="50" src={Logo} alt="logo" />
           
         
-  */} <div className = "logoanime1"></div>
+  */} 
+ 
+  <div className = "logoanime1"></div>
+  <div className = "logoname">D</div>
   <div className = "logoanime2"></div>
           <div className = "logoanime3"></div>
           {/* <h2

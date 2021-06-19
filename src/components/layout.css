@@ -1008,3 +1008,27 @@ body, html {
     display: none;
   }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&display=swap');
+
+.logoname {
+  font-family: 'Courgette', cursive;
+font-family: 'Great Vibes', cursive;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+@media (max-width: 482px) {
+  .logoname {
+    font-family: 'Courgette', cursive;
+  font-family: 'Great Vibes', cursive;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 3px;
+    font-size: 40px;
+  }
+}
+  
