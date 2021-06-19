@@ -3,6 +3,7 @@ import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "../../images/logo.png"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "gatsby-plugin-transition-link"
 
 const Navigation = styled.nav`
   height: 90px;
@@ -130,7 +131,7 @@ const Navbar = () => {
   isBrowser() && window.addEventListener('scroll',changeBackground);
   return (
     <Navigation className = {navbar ? 'navigation active' : 'navigation'}>
-      <AniLink paintDrip to="/" hex="#00006f" className = "logo"
+      <Link to="/"  className = "logo"
         >
           {/*<img className= "logo" width="150" height="50" src={Logo} alt="logo" />
           
@@ -147,7 +148,7 @@ const Navbar = () => {
           >
             Teplyak
           </h2> */}
-      </AniLink>
+      </Link>
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)} 

@@ -6,6 +6,8 @@ import React, { useRef, useState }  from 'react'
 import Scramble from 'react-scramble'
 import { Canvas, useRender, useFrame } from 'react-three-fiber';
 
+import Preloader from "../components/preloader"
+
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -38,6 +40,7 @@ function Box(props) {
 const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Аналитик данных']
 const Home = () => (
   <Layout>
+    <Preloader/>
     <div className = "HomePage container-lg">
       <div className="row">
     <SEO title="Главная" />

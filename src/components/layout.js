@@ -28,12 +28,12 @@ const Layout = ({ children }) => {
   }, [])
   return (
     
-    <>{loader ?
-      <div id = "preloader"><LottieLoader animationData={rocket} /> </div>:<div><NavBar />
+    <>
+    <NavBar />
         <Header />
         <Container>
         <main>{children}</main>
-        </Container></div>}
+        </Container>
         
     </>
   )
