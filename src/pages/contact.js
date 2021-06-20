@@ -42,21 +42,24 @@ const Contact= () => {
       <form method="post" action="/success" onSubmit={sendEmail}  data-netlify-recaptcha="true" netlify-honeypot="number" data-netlify="true" name="contact" className="grid grid-cols-1 gap-8 lg:col-start-8 lg:col-span-8">
           <input type="hidden" name="number" />
           <div className="row">
-          <input type="hidden" name="form-name" value="contact" placeholder= "Name" className="effect"/>
-          <label for="email" className=""></label>
             <div className="col-md-12">
-              <div className="md-form mb-0">
-            <input type="text" name="name" id="name" className="form-control border-bottom-dark-2 "  placeholder= "Имя" required />
-            <label className="block  pt-3 text-f4" htmlFor="email">Почта</label>
+              <div className="group">
+            <input type="text" name="name" id="name" className=""  placeholder= "" required />
+            <label className="" htmlFor="name">Имя</label>
             </div>
           </div>
             <div className="col-md-12">
-              <div className="md-form mb-0">
-            <input type="email" name="email" id="email" className="form-control" placeholder= "Почта" required />
-           <label className=" block pt-3 text-f4" htmlFor="message">Письмо</label>
-            <textarea name="message" id="message" rows="5" className="form-control border-bottom"  placeholder= "Текст"  required></textarea>
+              <div className="group">
+            <input type="email" name="email" id="email" className="" placeholder= "" required />
+           <label className="" htmlFor="email">Почта</label>
+           </div> 
+           </div>
+           <div className="col-md-12">
+           <div className="group">
+            <textarea name="message" id="message" rows="5" className=""  placeholder= "Текст"  required></textarea>
+            <label className="" htmlFor="message">Письмо</label>
             </div>
-          </div>
+            </div>
           </div>
           <button type="submit" className="btn mt-2 btn-success bg-tumbleweed hover:bg-sidecar text-prussian font-bold font-title lowercase px-4 py-4 rounded-md transition">Отправить</button>
           <div className='form-message-container'>

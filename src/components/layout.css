@@ -97,7 +97,7 @@ h1 {
   font-family: 'Commissioner', sans-serif;
   font-weight: sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.1;
 }
 mark {
@@ -966,7 +966,7 @@ body, html {
   max-height: 300px;
   position: relative;
   margin: 0 auto;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   /* координаты положения */
   z-index: 99999999;
@@ -1057,3 +1057,55 @@ font-family: 'Great Vibes', cursive;
   opacity: 0;
   transition: opacity 200ms;
 }
+
+.group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+input {
+  font-size: 18px;
+  padding: 5px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: white;
+  background: transparent;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  background: transparent;
+}
+
+  input:focus {
+      outline: none;
+  }
+
+  textarea:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  top:  -20px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
