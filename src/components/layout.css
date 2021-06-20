@@ -964,12 +964,11 @@ body, html {
 #preloader {
   max-width: 300px;
   max-height: 300px;
-  margin:0 auto;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
   /* координаты положения */
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   z-index: 99999999;
   opacity: 1;
   display: block;
@@ -1030,10 +1029,30 @@ font-family: 'Great Vibes', cursive;
   right:0;
   top:0;
   bottom:0;
-  background-color: black;
+  background-color: #00006f;
   z-index: 99999999;
-  opacity: 0.95;
+  opacity: 1;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  animation: fade2  1s 3s forwards;
+}
 
+@keyframes fade2 {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  
+  99% {
+    opacity: 0.4;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 .effect {
   border:0;
@@ -1041,4 +1060,19 @@ font-family: 'Great Vibes', cursive;
   width: 100%;
   padding: 7px 0;
   border-bottom: 1px solid white;
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
