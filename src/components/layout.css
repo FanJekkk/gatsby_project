@@ -982,18 +982,8 @@ body, html {
 }
 
 @keyframes fade1 {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  
-  99% {
-    opacity: 0.4;
-    display: none;
-  }
   100% {
     opacity: 0;
-    display: none;
   }
 }
 
@@ -1040,18 +1030,9 @@ font-family: 'Great Vibes', cursive;
 }
 
 @keyframes fade2 {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  
-  99% {
-    opacity: 0.4;
-    display: block;
-  }
+
   100% {
     opacity: 0;
-    display: none;
   }
 }
 .effect {
