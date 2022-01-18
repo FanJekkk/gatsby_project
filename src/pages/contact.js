@@ -63,9 +63,7 @@ const Contact= () => {
           </div>
           <button type="submit" className="btn mt-2 btn-success bg-tumbleweed hover:bg-sidecar text-prussian font-bold font-title lowercase px-4 py-4 rounded-md transition">Отправить</button>
           <div className='form-message-container'>
-              <p>
-                Спасибо за сообщение
-              </p>
+              
             
             </div>   
             

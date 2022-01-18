@@ -9,36 +9,10 @@ import { Canvas, useRender, useFrame } from 'react-three-fiber';
 import Preloader from "../components/preloader"
 import LottieLoader from 'react-lottie-loader'
 import data from '../components/animation/data.json'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { CSSTransition } from "react-transition-group"
 
 
-function Box(props) {
-  // This reference will give us direct access to the mesh
-  const mesh = useRef();
-
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-
-  // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
-
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? [1, 1, 1] : [2, 2, 2]}
-      onClick={e => setActive(!active)}
-      onPointerOver={e => setHover(true)}
-      onPointerOut={e => setHover(false)}>
-      <boxBufferGeometry attach="geometry" args={[2, 2, 2]} />
-      <meshStandardMaterial
-        attach="material"
-        color={hovered ? 'hotpink' : 'orange'}
-      />
-    </mesh>
-  );
-}
 const textArray = ['Инженер данных','Бизнес-аналитик', 'Разработчик','Аналитик данных']
 const Home = () => (
   <Layout>
@@ -74,12 +48,13 @@ const Home = () => (
       <LottieLoader animationData={data} />
     </div>
     </div>
-    <div className="col-lg-2 col-md-2 col-sm-2">
-    </div>
+    <div className="col-lg-4 col-md-4 col-sm-4"></div>
+    <div className="col-lg-2 col-md-2 col-sm-2 align-items-center"> <AniLink paintDrip to="/projects" hex="#33FF9C" className = "NavItem"><button class="btn btn-success">Проекты</button></AniLink></div>
+
+    <div className="col-lg-2 col-md-2 col-sm-2"> <AniLink paintDrip to="/contact" hex="#33FF9C" className = "NavItem"><button class="btn btn-success">Контакты</button></AniLink></div>
+
+    <div className="col-lg-4 col-md-4 col-sm-4 mb-4"></div>
     <div className="col-lg-2 col-md-2 col-sm-2"></div>
-    <div className="col-lg-4 col-md-4 col-sm-4">
-    
-    </div>
     </div>
     </div>
   </Layout>
