@@ -52,21 +52,21 @@ class TextScramble {
       return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
   }
-  
+
   // ——————————————————————————————————————————————————
   // Example
   // ——————————————————————————————————————————————————
-  
+
   const phrases = [
     'Бизнес-аналитик',
     'Программный инженер',
     'Data engineer',
     'Аналитик данных'
   ]
-  
+
   const el = document.querySelector('.text')
   const fx = new TextScramble(el)
-  
+
   let counter = 0
   const next = () => {
     fx.setText(phrases[counter]).then(() => {
@@ -74,5 +74,5 @@ class TextScramble {
     })
     counter = (counter + 1) % phrases.length
   }
-  
+
   next()

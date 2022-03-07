@@ -4,7 +4,7 @@ import Link from "gatsby-plugin-transition-link"
 
 const NavbarLinks = () => {
   return (
-    <> 
+    <>
       <Link to="/"  className = "NavItem FirstItem">
       Главная
       </Link>

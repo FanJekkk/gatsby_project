@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
-import Logo from "../../images/logo.png"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Link from "gatsby-plugin-transition-link"
 
@@ -46,7 +45,7 @@ const Toggle = styled.div`
 
   
 `
-   
+
 const Navbox = styled.div`
   display: flex;
   height: 100%;
@@ -121,7 +120,7 @@ const Navbar = () => {
   const changeBackground = () => {
     if(window.scrollY >= 80) {
       setNavbar(true)
-  
+
     }else {
       setNavbar(false);
     }
@@ -136,8 +135,8 @@ const Navbar = () => {
           {/*<img className= "logo" width="150" height="50" src={Logo} alt="logo" />
           
         
-  */} 
- 
+  */}
+
   <div className = "logoanime1"></div>
   <div className = "logoname">D</div>
   <div className = "logoanime2"></div>
@@ -151,7 +150,7 @@ const Navbar = () => {
       </Link>
       <Toggle
         navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)} 
+        onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger /> }
       </Toggle>
