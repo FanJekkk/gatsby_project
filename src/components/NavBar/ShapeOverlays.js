@@ -40,7 +40,7 @@ const ease = {
       return Math.pow(t - 1.0, 3.0) * (1.0 - t) + 1.0;
     },
   }
-  
+
   export default class ShapeOverlays {
     constructor(elm) {
       this.elm = elm;
@@ -80,12 +80,12 @@ const ease = {
     updatePath(time) {
       const points = [];
       for (let i = 0; i < this.numPoints; i++) {
-        const thisEase = this.isOpened ? 
+        const thisEase = this.isOpened ?
                           (i === 1) ? ease.cubicOut : ease.cubicInOut:
                           (i === 1) ? ease.cubicInOut : ease.cubicOut;
         points[i] = thisEase(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 100
       }
-  
+
       let str = '';
       str += (this.isOpened) ? `M 0 0 V ${points[0]} ` : `M 0 ${points[0]} `;
       for (let i = 0; i < this.numPoints - 1; i++) {

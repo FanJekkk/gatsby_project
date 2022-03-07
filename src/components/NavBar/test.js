@@ -39,7 +39,7 @@ class ShapeOverlays {
       for (var i = 0; i < this.numPoints; i++) {
         points[i] = (1 - ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1))) * 100
       }
-  
+
       let str = '';
       str += (this.isOpened) ? `M 0 0 V ${points[0]}` : `M 0 ${points[0]}`;
       for (var i = 0; i < this.numPoints - 1; i++) {
@@ -73,13 +73,13 @@ class ShapeOverlays {
       }
     }
   }
-  
+
   (function() {
     const elmHamburger = document.querySelector('.hamburger');
     const gNavItems = document.querySelectorAll('.global-menu__item');
     const elmOverlay = document.querySelector('.shape-overlays');
     const overlay = new ShapeOverlays(elmOverlay);
-  
+
     elmHamburger.addEventListener('click', () => {
       if (overlay.isAnimating) {
         return false;

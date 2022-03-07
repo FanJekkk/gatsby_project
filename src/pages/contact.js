@@ -5,8 +5,8 @@ import emailjs, { init }from 'emailjs-com';
 init(process.env.GATSBY_USERID);
 
 console.log(process.env.GATSBY_TEST)
-  
- 
+
+
 
 function sendEmail(e) {
   e.preventDefault();
@@ -17,7 +17,7 @@ function sendEmail(e) {
           alert(
             "Email send successfully!"
           );
-        return 
+        return
         }
     }, (error) => {
         console.log(error.text);
@@ -52,7 +52,7 @@ const Contact= () => {
               <div className="group">
             <input type="email" name="email" id="email" className="" placeholder= "" required />
            <label className="" htmlFor="email">Почта</label>
-           </div> 
+           </div>
            </div>
            <div className="col-md-12">
            <div className="group">
@@ -63,10 +63,10 @@ const Contact= () => {
           </div>
           <button type="submit" className="btn mt-2 btn-success bg-tumbleweed hover:bg-sidecar text-prussian font-bold font-title lowercase px-4 py-4 rounded-md transition">Отправить</button>
           <div className='form-message-container'>
-              
-            
-            </div>   
-            
+
+
+            </div>
+
         </form>
 
     </div>
@@ -74,7 +74,7 @@ const Contact= () => {
 
     </div>
     <div className="col-lg-2 col-md-2 col-sm-2"></div>
-    
+
 
   </Layout>)};
 
